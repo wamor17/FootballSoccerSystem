@@ -81,11 +81,11 @@
                                 Cambiar jornada <i class='small material-icons right'>arrow_drop_down</i>
                             </a>
 
-                            <ul id='ddJornadas' class='dropdown-content'>
-                                <!-- <li><a href='#!'>Jornada 1</a></li> -->
-                            </ul>
+                            <ul id='ddJornadas' class='dropdown-content'> </ul>
                         </div>
-                    </div>
+                    </div> <br><br>
+
+                    <div class="games-result"></div>
                 
                 </div>
                 <br>

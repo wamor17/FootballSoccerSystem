@@ -202,6 +202,9 @@ td, th{
 .border-lr{
     border-left: 1px solid rgba(160,160,160, 0.5) !important;
     border-right: 1px solid rgba(160,160,160, 0.5) !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border-radius: 30px !important;
 }
 
 .border-left{
