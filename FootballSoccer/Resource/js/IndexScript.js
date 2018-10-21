@@ -43,12 +43,18 @@ var Tabla = {
             "Maluma babys": { PJ: 7, G: 6, E: 0, P: 1, GF: 3, GE: 6, Dif: 3, Puntos: 0 },
 };
 
-$(function(){
-    ChangeJornada();
-    ShowResultsGames("Jornada 1");
+$('#ddJornadas').on('click', 'li', function(){
+    ShowResultsGames($(this).text());
 });
 
-function ChangeJornada(){
+$(document).ready(function(){
+    PutJornadasInMenu();
+    var LastGames = $('#ddJornadas').children().eq(($('#ddJornadas').children().length - 1)).text();
+
+    ShowResultsGames(LastGames);
+});
+
+function PutJornadasInMenu(){
     for( i in Jornadas ){
         $('#ddJornadas').append("<li><a href='#!'>"+i+"</a></li>");
     }
@@ -56,11 +62,13 @@ function ChangeJornada(){
 
 function ShowResultsGames(n){
     var InfoGames = Jornadas[n];
-    var cont = 0;
 
+    $('#NumJornada').empty().text(n);
+    $('.games-result').empty();
     for( i in InfoGames ){
         var Game = InfoGames[i];
-        $('.col-game-result')
+
+        $('.games-result')
         .append("<div class='card hoverable'>"+
                     "<div class='card-content'>"+
                         "<div class='row rowCardResultGame'>"+
@@ -73,7 +81,6 @@ function ShowResultsGames(n){
                         "<div class='center-align marginHour' id='DateGame'> "+Game.Fecha+" - "+Game.Hora+" </div>"+
                     "</div>"+
                 "</div>" );
-        cont++;
     }
 }
 
