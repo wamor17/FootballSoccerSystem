@@ -1,0 +1,33 @@
+
+<div class='row marginJornadas'>
+
+    <div class='col m7 left-align'>
+        <p id='jornada' class='sizeTextJornadas'></p>
+    </div>
+
+    <div class='col m5'>
+        <div class='dropdown right-align'>
+            <a class='dropdown-trigger btn blue-grey lighten-1 waves-effect waves-light' href='#' data-target='ddJornadas'>
+                Cambiar jornada <i class='small material-icons right'>arrow_drop_down</i>
+            </a>
+            <ul id='ddJornadas' class='dropdown-content'>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<div class='card hoverable'>
+    <div class='card-content'>
+        <div class='row rowCardResultGame'>
+            <a id='idGame_".$num."'>  </a>
+            <a id='jornada_".$num."'>  </a>
+            <div class='col s4 m4 center-align sizeTeams' id='E1_".$num."_left'> Equipo 1 </div>
+            <div class='col s4 m4 center-align border-lr sizeGoals' id='goles_".$num."'> - - </div>
+            <div class='col s4 m4 center-align sizeTeams' id='E2_".$num."_right'> Equipo 2 </div>
+        </div>
+    </div>                                        
+    <div class='card-action grey lighten-5'>
+        <div class='center-align marginHour' id='dateGame".$num."'> Fecha </div>
+    </div>
+</div>

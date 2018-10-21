@@ -1,0 +1,145 @@
+
+<!-- ------------------------------------------------------------------------------------------------- -->
+
+<div class='collapsible-body white'>
+<a href='#modalDeleteTeam' class='modal-trigger right' onclick='loadDataTeamForDelete(".$num.")'> <i class='material-icons black-text'>delete</i> </a>
+<a href='#modalModifyTeam' class='modal-trigger right' onclick='loadDataTeamForModify(".$num.")'> <i class='material-icons black-text'>edit</i> </a>";
+
+$getPlayers = "SELECT ID_Jugador, ID_Equipo, Nombre, Apellidos, Posicion, Goles_Marcados FROM Jugador INNER JOIN Alumno ON Jugador.ID_Alumno = Alumno.ID_Alumno WHERE ID_Equipo = '".$Equipos['ID_Equipo']."';";
+$getData = $connection->query($getPlayers);
+
+if( $Equipos["Diff"] > 0 ){
+$colorDiff = 'green';
+$Diff = "+".$Equipos["Diff"];
+}else if( $Equipos["Diff"] < 0 ){
+$colorDiff = 'red';
+$Diff = $Equipos["Diff"];
+}else{
+$colorDiff = 'black';
+$Diff = $Equipos["Diff"];
+}
+
+echo "<div class='row'>
+    <div class='col s12 m12 l7'>
+        <h5> Jugadores </h5>
+        <table class='table striped highlight'>
+            <tr>
+                <th class='center-align txtT widthPlayer'><strong> Nombre </strong></th>
+                <th class='center-align txtT'><strong> Posici&oacute;n </strong></th>
+                <th class='center-align txtT'><strong> Goles </strong></th>
+                <th class='center-align txtT'><strong>  </strong></th>
+            </tr>";
+
+            while( $Jugadores = $getData->fetch_assoc() ){
+                echo "<tr>";
+                    echo "<a id='playerID".$numPlayer."' style='display: none;'> ". $Jugadores["ID_Jugador"] ." </a>";
+                    echo "<a id='playerTeamID".$numPlayer."' style='display: none;'> ". $Jugadores["ID_Equipo"] ." </a>";
+                    echo "<td class='txtR' id='playerName".$numPlayer."'>".$Jugadores["Nombre"]." ".$Jugadores["Apellidos"]."</td>";
+                    echo "<td class='txtR' id='playerPosition".$numPlayer."'class='left-align'>".$Jugadores["Posicion"]." </td>";
+
+                    if( $Jugadores["Goles_Marcados"] > 0 )
+                        $show = "block";
+                    else
+                        $show = "none";
+
+                    echo "<td class='txtR' id='playerGoals".$numPlayer."' class='center-align'><p style='display: ".$show.";'>".$Jugadores["Goles_Marcados"]."</p></td>";
+                    echo "<td class='center-align'>
+                            <a class='icon-color modal-trigger' href='#modalModifyPlayer' onclick='loadData2ModifyPlayer($numPlayer)'> <i class='right-align material-icons'>edit</i> </a>
+                            <a class='icon-color modal-trigger' href='#modalDeletePlayer' onclick='loadData2DeletePlayer($numPlayer, $num)'> <i class='right-align material-icons'>delete</i></a>
+                        </td>";
+                echo "</tr>";
+                $numPlayer++;
+            }
+            echo "</table>
+    </div>
+    <div class='col s12 m12 l5'>
+        <h5> Estad&iacute;stica </h5>
+        <table class='table striped '>
+            <tr> <td class='txtT center-align'><strong> PJ </strong></td>
+                <td class='txtT center-align'><strong> PG </strong></td>
+                <td class='txtT center-align'><strong> PE </strong></td>
+                <td class='txtT center-align'><strong> PP </strong></td>
+                <td class='txtT center-align'><strong> GA </strong></td>
+                <td class='txtT center-align'><strong> GR </strong></td>
+                <td class='txtT center-align'><strong> Diff </strong></td>
+                <td class='txtT center-align'><strong> Pts </strong></td>
+            </tr>
+            <tr> <td class='txtR center-align'> ".$Equipos["PJ"]." </td>
+                <td class='txtR center-align'> ".$Equipos["PG"]." </td>
+                <td class='txtR center-align'> ".$Equipos["PE"]." </td>
+                <td class='txtR center-align'> ".$Equipos["PP"]." </td>
+                <td class='txtR center-align'> ".$Equipos["GA"]." </td>
+                <td class='txtR center-align'> ".$Equipos["GR"]." </td>
+                <td class='txtR center-align' style='color: ".$colorDiff.";'> ".$Diff." </td>
+                <td class='txtR center-align'><strong>".$Equipos["Puntos"]."</strong></td>
+            </tr>
+        </table>
+        <br>
+
+        <div class='row'>
+            <div class='col s12 m12'>
+                <h5> Uniforme </h5>
+                <a id='colorTeam".$num."' style='display: none;'>".$Equipos["Color_Uniforme"]."</a>
+
+                <div class='imgColorTeam'>
+                    <img src='resource/images/kit-left.png' class='imgColorL' style='background-color:".$Equipos["Color_Uniforme"]."'>
+                    <img src='resource/images/kit-body.png' class='imgColorB' style='background-color:".$Equipos["Color_Uniforme"]."'>
+                    <img src='resource/images/kit_right.png' class='imgColorR' style='background-color:".$Equipos["Color_Uniforme"]."'>
+                    <img src='resource/images/kit_shorts.png' class='imgColorS1' style='background-color:".$Equipos["Color_Uniforme"]."'>
+                    <img src='resource/images/kit_socks.png' class='imgColorS2' style='background-color:".$Equipos["Color_Uniforme"]."'>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+<!-- ------------------------------------------------------------------------------------------------- -->
+
+
+<!-- ------------------------------------------------------------------------------------------------- -->
+<?php
+    $QueryNT = "SELECT ID_Equipo FROM Jugador WHERE Jugador.ID_Equipo IS NULL;";
+    $QData = $connection->query($QueryNT);
+
+    if( $No = $QData->fetch_assoc() ){
+        echo "<ul class='collapsible collection with-header'>
+                <li class='collection-header'> <h6> Jugadores sin equipo </h6> </li>";
+
+                $QueryTeams = "SELECT ID_Equipo, Nombre FROM Equipo;";
+                $QueryOutOfTeams = "SELECT *FROM Jugador INNER JOIN Alumno USING (ID_Alumno) WHERE Jugador.ID_Equipo IS NULL;";
+                $QueryData = $connection->query($QueryOutOfTeams);
+
+                $numNoPlayer = 0;
+                while( $PlayerNoTeams = $QueryData->fetch_assoc() ){
+                    echo "<li>";
+                        echo "<div class='collapsible-header'> <i class='material-icons'>expand_more</i> <a id='idAddPlayer".$numNoPlayer."' style='display: none;'> ".$PlayerNoTeams["ID_Alumno"]." </a>" .$PlayerNoTeams["Nombre"]." ".$PlayerNoTeams["Apellidos"]. "</div>";
+                        echo "<div class='collapsible-body'>
+                                <p> Seleccione un equipo </p> ";
+
+                        $QueryDataTeams = $connection->query($QueryTeams);
+
+                        while( $DataTeams = $QueryDataTeams->fetch_assoc() ){
+                        echo"<p> 
+                                <label>
+                                    <input name='teams".$numNoPlayer."' type='radio' value='". $DataTeams["ID_Equipo"] ."' />
+                                    <span> ". $DataTeams["Nombre"] ." </span>
+                                </label>
+                            </p>";
+                        }
+
+                        echo "<div class='right-align'>
+                                <button class='btn-small waves-effect blue darken-2' type='submit' name='action' onclick='addPlayer2Team(".$numNoPlayer.")'>Agregar
+                                    <i class='material-icons left'>add</i>
+                                </button>
+                                </div>";
+                        echo "</div>";
+                    echo "</li>";
+                    
+                    $numNoPlayer++;
+                }
+        echo "</ul>";
+    }
+    $QData->close();
+?>
+<!-- ------------------------------------------------------------------------------------------------- -->

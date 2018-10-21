@@ -1,0 +1,33 @@
+
+#correctD, #incorrectD, #correct, #incorrect, #txtIDModalDelete,
+#txtIDModalModify, .txtID{
+    display: none;
+}
+
+.alignButtons{
+    float: left;
+}
+
+.marginBottom{
+    margin-bottom: 0px !important;
+}
+
+.iconColor{
+    color: #424242 !important;
+}
+
+#modalInsertTournament, #modalModifyTournament, #modalDeleteTournament {
+    width: 25% !important;     
+}
+
+@media screen and (max-width: 953px) {
+    #modalInsertTournament, #modalModifyTournament, #modalDeleteTournament {
+        width: 50% !important;     
+    }
+}
+
+@media screen and (max-width: 360px){
+    #modalInsertTournament, #modalModifyTournament, #modalDeleteTournament {
+        width: 85% !important;     
+    }
+}

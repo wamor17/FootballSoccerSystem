@@ -1,0 +1,204 @@
+/* 
+    Created on : 22-ene-2018, 10:42:33
+    Author     : walter
+*/
+
+/* Estilos para la página en general, fondo de pantalla
+   escroll de los elementos, etc. */
+body{
+    background-color: #f5f5f5 !important;
+    background-image: url("../images/ball3.jpg");
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+
+/* Estilos para la barra de navecación */
+.navbarColor{
+    background: linear-gradient(rgb(23, 77, 135) 0%, rgb(14, 52, 91) 77%, rgb(14, 52, 91) 100%);
+}
+
+.imageBanner{
+    width: 8%;
+}
+
+.contentIndex{
+    margin-bottom: 6%;
+}
+
+.alignTopBrand{
+    padding-top: 8px;
+    font-size: 18px;
+}
+
+.textLogo{
+    color: white !important;
+}
+
+.textLogo:hover{
+    color: lightgray !important;
+    text-decoration: none;
+}
+
+.content{
+    margin-top: 5%;
+}
+
+.content1{
+    margin-bottom: 5%;
+}
+
+/*  PANEL PRINCIPAL CON EL NOMBRE DEL TORNEO */
+
+.principalBanner{
+    padding: 0px 10px 10px 10px;
+}
+
+/* Damos estilos al panel para mostrar la tabla general */
+
+.glosarioSize{
+    font-size: 12px;
+}
+
+.headGeneralTable{
+    font-size: 24px;
+    margin-top: 2px;
+    margin-bottom: -2px;
+}
+
+.fixPadding{
+    padding: 8px 5px 0px 5px !important;
+}
+
+/* Etilos para el modal de login */
+
+.imageLogIn{
+    width: 80%;
+}
+
+.modal-dialog{
+    display: block !important;
+}
+
+.panelFooterModal{
+    background-color: white !important;
+    border-top-color: rgb(220,220,220) !important;
+    text-align: right;
+}
+
+.rowModalBodyModify{
+    margin-top: 15px;
+}
+
+.panelPaddingBody{
+    padding-bottom: 0px !important;
+}
+
+/*
+@media(max-width: 1280px){
+    .teamSize{ font-size: 150% !important; }
+    .golesSize{ font-size: 100%; }
+    .hourSize{ font-size: 120% !important; }
+    .resultadoJornada{ font-size: 100% !important; }
+}
+
+@media(max-width: 768px){
+    .teamSize{ font-size: 280% !important; }
+    .golesSize{ font-size: 280%; }
+    .hourSize{ font-size: 140% !important; }
+    .resultadoJornada{
+        font-size: 250% !important;
+        margin-top: 6%;
+    }
+}*/
+
+/* Estilos para las tarjetas donde se muestran los
+    resultados de cada partido para la jornada
+    seleccionada
+*/
+
+.golesSize{
+    font-size: 180%;
+    margin-top: 16px;
+}
+
+.teamSize{
+    font-size: 150%;
+    text-align: center;
+    background-color: rgba(0,0,0,0) !important;
+    border-top-style: solid white;
+    border: solid white !important;
+    color: black !important;
+}
+
+.panelFooter{
+    text-align: center;
+    border: white !important;
+    background-color: white !important;
+    margin-top: -25px;
+}
+
+#e1Goals, #e2Goals{
+    text-align: center;
+}
+
+.panelHead{
+    background-color: white !important;
+    border-bottom: white !important;
+}
+
+.btnAlign{
+    text-align: right;       
+}
+
+.teamNamePanel{
+    text-align: left;
+    padding-top: 8px;
+}
+
+.panelShadow{
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08) !important;
+}
+
+/* OTROS ESTILOS */
+
+.txtTeamsList{
+    text-align: left;
+}
+
+.squareColor{
+    margin-left: 40px;
+    width: 30px;
+    height: 30px;
+    border: 0.8px solid rgba(20,20,20,0.2);
+    border-radius: 100%;
+}
+
+.txtCenter{
+    text-align: center;
+}
+
+.txtLeft{
+    text-align: left;
+}
+
+.txtRight{
+    text-align: right;
+}
+
+.cursorPointer{
+    cursor: pointer;
+}
+#e2{
+    position: absolute;
+    right: 60px;
+}
+
+#e1{
+    text-align: center;
+}
+
+.dropdownAlign{
+    margin-top: 13px;
+    text-align: right;
+}

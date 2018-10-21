@@ -1,0 +1,359 @@
+/* 
+    Created on : 22-ene-2018, 10:42:33
+    Author     : walter
+*/
+
+.licon{
+    font-size: 35px !important;
+}
+
+.contentIndex{
+    margin-bottom: 6%;
+}
+
+.navbarColor{
+    background: linear-gradient(rgb(23, 77, 135) 0%, rgb(14, 52, 91) 77%, rgb(14, 52, 91) 100%);
+}
+
+.textLogo{
+    color: white !important;
+}
+
+.textLogo:hover{
+    color: lightgray !important;
+}
+
+.content{
+    margin-top: 5%;
+}
+
+.content1{
+    margin-bottom: 5%;
+}
+
+.tgTitleSize{
+    font-size: 30px !important;
+    padding-bottom: 15px;
+}
+
+.imageLogIn{
+    width: 80%;
+}
+
+/* Formato para el dropdown en modo PC */
+
+/* ---------------------------------------- */
+
+/* Formato al modal de Login */
+
+#modalLogIn{
+    width: 30% !important;
+}
+
+/* ---------------------------------------- */
+
+@media(max-width: 570px){
+    .principalBanner{
+        font-size: 24px !important;
+    }
+}
+
+@media(max-width: 480px){
+    .principalBanner{
+        font-size: 19px !important;
+    }
+
+    .brand-logo{
+        font-size: 18px !important;
+    }
+
+    .licon{
+        font-size: 20px !important;
+    }
+    
+    .sizeTeams{
+        font-size: 20px !important;
+        word-wrap: break-word;
+    }
+
+    .sizeGoals{
+        font-size: 28px !important;
+    }
+}
+
+@media screen and (min-width: 601px){
+    .brand-logo{
+        font-size: 2em !important;
+    }
+}
+
+@media screen and (min-width: 481){
+    .brand-logo{
+        font-size: 2em !important;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .sizeTextJornadas{
+        font-size: 18px !important;
+    }
+
+    .btn{
+        font-size: 11px !important;
+    }
+
+    .sizeTeams{
+        font-size: 20px !important;
+        word-wrap: break-word;
+    }
+
+    .sizeGoals{
+        font-size: 20px !important;
+    }
+
+    .brand-logo{
+        font-size: 18px !important;
+    }
+
+    .licon{
+        font-size: 22px !important;
+    }
+
+    .sizeLockOpen{
+        font-size: 50px !important;
+    }
+
+    .principalBanner{
+        font-size: 20px !important;
+    }
+
+    .hs{ font-size: 11px;}
+    .eS{
+        font-size: 11px;
+        word-wrap: break-word;
+    }
+
+    .tgTitleSize{
+        font-size: 24px !important;
+        margin-top: -10px;
+        margin-bottom: 0px !important;
+    }
+
+    #modalLogIn{
+        width: 80% !important;
+    }
+}
+
+.navColor{
+    background-color: #263238 !important;
+}
+
+/* Formato y estilos para la tabla general
+    y la tabla de goleo
+*/
+
+td, th{
+    padding: 8px 5px !important;
+}
+
+.glSize{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.glMargin{
+    padding: 5px 5px 0.1px 25px !important;
+}
+
+.textGlosary{
+    font-size: 15px !important;
+}
+
+.gliconSize{
+    font-size: 20px !important;
+}
+
+.noPaddingCard{
+    padding: 25px 15px 8px 15px !important;
+}
+
+/* ---------------------------------------- */
+
+/* Formato a las tarjetas para mostrar los 
+    resultados de los partidos de cada jornada
+*/
+
+.sizeTeams{
+    font-size: 25px;
+}
+
+.sizeGoals{
+    font-size: 30px;
+}
+
+.marginHour{
+    margin: -8px !important;
+}
+
+.marginJornadas{
+    margin-bottom: -10px !important;
+}
+
+.border-lr{
+    border-left: 1px solid rgba(160,160,160, 0.5) !important;
+    border-right: 1px solid rgba(160,160,160, 0.5) !important;
+}
+
+.border-left{
+    border-left: 1px solid rgba(160,160,160, 0.5) !important;
+}
+
+.sizeTextJornadas{
+    font-size: 25px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.rowCardResultGame{
+    margin-bottom: 0 !important;
+}
+
+.golesSize{
+    font-size: 180%;
+    margin-top: 16px;
+}
+
+.iconEditGames{
+    color: black !important;
+}
+
+.btnFloatingEdit{
+    right: -5px !important;
+}
+
+/* Lado del administrador */
+.rowCardOptions{
+    margin: -20px -26px 0px 0px !important;
+}
+
+.sizeEdit{
+    font-size: 22px !important;
+}
+
+.editColor{
+    color: #616161 !important;
+}
+
+/* Edicion del modal para modificar los marcadores de los partidos */
+#modalModifyGame{
+    height: 50% !important;
+}
+
+.team1Modal, .team2Modal{
+    font-size: 35px !important;
+}
+
+#e1Goals, #e2Goals{
+    font-size: 43px !important;
+    text-align: center;
+}
+
+#setDateModal, #setHourModal{
+    font-size: 23px !important;
+    text-align: center;
+}
+
+.rowGameModify{
+    margin-top: 25px !important;
+}
+
+.rowDateModify{
+    margin-bottom: 0px !important;
+}
+
+@media screen and (max-width: 360px){
+    #modalModifyGame{
+        width: 90% !important;
+    }
+
+    .team1Modal, .team2Modal{
+        font-size: 30px !important;
+    }
+
+    .team1Modal{
+        margin-top: -10% !important;
+        margin-bottom: 5% !important;
+    }
+
+    .team2Modal{
+        margin-top: 6% !important;
+        margin-bottom: 0% !important;
+    }
+
+    #e1Goals, #e2Goals{
+        font-size: 30px !important;
+    }
+
+    .rowDateModify{
+        margin-bottom: -20px !important;
+        margin-top: 20px !important;
+    }
+}
+
+/* ---------------------------------------- */
+
+.panelFooterModal{
+    background-color: white !important;
+    border-top-color: rgb(220,220,220) !important;
+    text-align: right;
+}
+
+.teamNamePanel{
+    text-align: left;
+    padding-top: 8px;
+}
+
+.txtTeamsList{
+    text-align: left;
+}
+
+.squareColor{
+    margin-left: 40px;
+    width: 30px;
+    height: 30px;
+    border: 0.8px solid rgba(20,20,20,0.2);
+    border-radius: 100%;
+}
+
+.txtCenter{
+    text-align: center;
+}
+
+.txtLeft{
+    text-align: left;
+}
+
+.txtRight{
+    text-align: right;
+}
+
+.cursorPointer{
+    cursor: pointer;
+}
+
+.principalBanner{
+    font-size: 30px;
+    margin-top: -15px !important;
+    margin-bottom: -15px !important;
+}
+
+.dropdownAlign{
+    margin-top: 13px;
+    text-align: right;
+}
+
+.page-footer{
+    padding-top: 0px !important;
+}
+
+

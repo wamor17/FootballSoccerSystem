@@ -1,0 +1,33 @@
+
+#btnShowInforStudent{
+    text-align: center;
+}
+
+.textAlignStudent{
+    text-align: left;
+}
+
+.paddingModal{
+    padding-left: 30px !important;
+}
+
+.hideTexbox{
+    display: none;
+}
+
+.endBody{
+    border-bottom: 0px !important;
+    margin-bottom: 100px;
+}
+
+.btn-margin{
+    margin: 1% 0.5% 1% 0 !important;
+}
+
+.filter{
+    margin: 0 !important;
+}
+
+.rowOptions{
+    margin-bottom: -5% !important;
+}

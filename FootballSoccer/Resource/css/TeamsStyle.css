@@ -1,0 +1,197 @@
+
+.no-display{
+    display: none !important;
+}
+
+.table-title-text{
+    margin-top: 0 !important;
+}
+
+.collection-item:hover{
+    background-color: rgb(240, 240, 240) !important;
+}
+
+.active{
+    background-color: rgb(240, 240, 240) !important;
+}
+
+.collapsible-body{
+    background-color: white !important;
+}
+
+.titlePlayerNoMargin{
+    margin-top: -10px !important;
+    margin-bottom: -10px !important;
+}
+
+.alertTeams{
+    padding: 5px !important;
+    padding-left: 20px !important;
+}
+
+.colorSelectedTeam{
+    margin-left: 10px;
+    margin-top: 25px;
+    width: 30px;
+    height: 30px;
+    border: 0.8px solid rgba(20,20,20,0.2);
+    border-radius: 100%;
+    background-color: white;
+}
+
+.imgDangerDelete{
+    width: 45%;
+    margin-left: 27%;
+    margin-bottom: 10%;
+}
+
+#correctIns, #incorrectIns, .txtIDTeamShow,
+.txtIDTeamModify, #correctUP, #incorrectUP,
+#correctDel, #incorrectDel, .txtIDTeamDelete,
+#colorSelectedUpdate{
+    display: none;
+}
+
+.cardTeam{
+    width: calc(48% - 5px) !important;
+    margin: 5px !important;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.cardSection{
+    margin-top: 10px;
+}
+
+.collapsible{
+    margin-top: 2% !important;
+}
+
+.title-modify-team{
+    margin-top: 0 !important;
+}
+
+/* IMAGENES DEL UNIFORME */
+.imgColorTeam, .imgColorTeam1{
+    background-color: white !important;
+    text-align: center;
+}
+
+.imgColorTeam1{
+    margin-top: 12%;
+}
+
+.imgColorL, .imgColorB, .imgColorR{
+    display: inline-block;
+    margin-left: -2px;
+    margin-right: -2px;
+    margin-bottom: -5px;
+    padding: 0;
+}
+
+.imgColorS1, .imgColorS2{
+    display: block;
+    margin: auto;
+    padding: auto;
+    width: 40%;
+}
+
+.imgColorL, .imgColorR{
+    width: 12.6%;
+}
+
+.imgColorB{
+    width: 15.25%;
+}
+
+.icon-color{
+    color: black;
+}
+
+#modalAddPlayer{
+    width: 25% !important;
+    height: 50% !important;
+}
+
+.posicionJugador{
+    margin-top: 3rem !important;
+}
+
+.golesAnotados{
+    margin-top: 3rem !important;
+    margin-bottom: 10px !important;    
+}
+
+.collapsible-body{
+    padding: 0.8rem !important;
+}
+
+.IDTeam, .IDTeamUpdate {
+    display: none;
+}
+
+#modalInsertTeam, #modalModifyTeam,
+#modalModifyPlayer{
+    width: 45% !important;
+    height: 50% !important;
+}
+
+#modalModifyPlayer{
+    width: 30% !important;
+}
+
+#modalDeleteTeam, #modalDeletePlayer{
+    width: 25% !important;
+    height: 45% !important;
+}
+
+.modal, .modal-content{
+    overflow-y: visible !important;
+}
+
+.iconColor{
+    border: 1px solid black;
+}
+
+@media screen and (max-width: 953px) {
+    #modalInsertTeam, #modalModifyTeam, #modalDeleteTeam,
+    #modalModifyPlayer, #modalDeletePlayer{
+        width: 60% !important;
+        height: 50% !important;
+    }
+
+    .imgColorL, .imgColorB, .imgColorR{
+        margin: -1.9px !important;
+    }
+
+    .imgColorB{
+        width: 15.48% !important;
+    }
+
+    .txtT{ font-size: 15px; }
+    .txtR{ font-size: 14px; }
+}
+
+@media screen and (max-width: 360px){
+    .imgColorTeam1{
+        margin-top: 1.5%;
+    }
+
+    .box-kit{
+        overflow-y: hidden !important;
+    }
+
+    .modal{
+        max-height: 90% !important;
+    }
+
+    #modalInsertTeam, #modalModifyTeam, #modalDeleteTeam,
+    #modalModifyPlayer, #modalDeletePlayer{
+        width: 90% !important;
+        height: 70% !important;
+    }
+
+    #modalModifyTeam{
+        height: 80% !important;
+    }
+}
